@@ -9,8 +9,6 @@ galaxy_info:
     - name: EL
       versions:
         - 7
-    - name: Ubuntu
-      versions:
   namespace: ome
   role_name: nginx
   galaxy_tags: ['nginx']
