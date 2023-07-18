@@ -47,7 +47,7 @@ def test_version(host):
     if hostname == 'nginx-custom':
         assert ver == ('nginx version: nginx/1.15.8')
     else:
-        assert ver.startswith('nginx version: nginx/1.20.1')
+        assert ver.startswith('nginx version: nginx/1.24.0')
 
 
 def test_nginx_configuration(host):
