@@ -6,24 +6,10 @@
 
 - name: system packages | setup upstream nginx stable repo
   become: true
-   ansible.builtin.dnf:
+  ansible.builtin.dnf:
     update_cache: true
     name: "https://nginx.org/packages/centos/9/x86_64/RPMS/nginx-1.24.0-1.el9.ngx.x86_64.rpm"
     state: present
-  when: nginx_stable_repo
-
-- name: system packages | setup upstream nginx mainline repo
-  become: true
-  copy:
-    src: nginx-mainline.repo
-    dest: /etc/yum.repos.d/nginx-mainline.repo
-    mode: 0644
-  when: not nginx_stable_repo
-
-- name: system packages | check if epel is installed
-  stat:
-    path: '/etc/yum.repos.d/epel.repo'
-  register: epel_repo
 
 - name: system packages | install nginx
   become: true
