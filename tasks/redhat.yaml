@@ -1,6 +1,4 @@
 ---
-
----
 - name: Import a key for nginx
   ansible.builtin.rpm_key:
     state: present
