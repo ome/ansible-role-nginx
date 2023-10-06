@@ -9,22 +9,22 @@ lint: |
     flake8
 platforms:
   - name: nginx-default
-    image: centos/systemd:latest
+    image: eniocarboni/docker-rockylinux-systemd:9
     command: /sbin/init
     privileged: true
   - name: nginx-custom
-    image: centos/systemd:latest
+    image: eniocarboni/docker-rockylinux-systemd:9
     command: /sbin/init
     privileged: true
   - name: nginx-disabled
-    image: centos/systemd:latest
+    image: eniocarboni/docker-rockylinux-systemd:9
     command: /sbin/init
     privileged: true
 provisioner:
   name: ansible
   playbooks:
     converge: ../resources/playbook.yml
-    prepare: prepare.yml
+    # prepare: prepare.yml
   lint:
     name: ansible-lint
   inventory:
@@ -39,6 +39,6 @@ provisioner:
       nginx-disabled:
         nginx_systemd_setup: false
 scenario:
-  name: centos7
+  name: rockylinux9
 verifier:
   name: testinfra
