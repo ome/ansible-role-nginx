@@ -48,7 +48,7 @@ provisioner:
         nginx_keep_default_configs: true
         nginx_stable_repo: false
         # Current mainline is 1.15.9
-        nginx_version: 1.15.8
+        nginx_version: 1.20.2
         nginx_logrotate_interval: weekly
         nginx_logrotate_backlog_size: 5
       nginx-disabled:
