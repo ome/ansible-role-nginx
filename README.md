@@ -2,7 +2,7 @@ Nginx
 =====
 
 [![Actions Status](https://github.com/ome/ansible-role-nginx/workflows/Molecule/badge.svg)](https://github.com/ome/ansible-role-nginx/actions)
-[![Ansible Role](https://img.shields.io/ansible/role/41090.svg)](https://galaxy.ansible.com/ome/nginx/)
+[![Ansible Role](https://img.shields.io/badge/ansible--galaxy-nginx-blue.svg)](https://galaxy.ansible.com/ui/standalone/roles/ome/nginx/)
 
 Install upstream Nginx.
 
