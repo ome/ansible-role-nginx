@@ -1,8 +1,0 @@
----
-- hosts: nginx-disabled
-  tasks:
-  - name: Install epel
-    become: true
-    yum:
-      name: epel-release
-      state: present
